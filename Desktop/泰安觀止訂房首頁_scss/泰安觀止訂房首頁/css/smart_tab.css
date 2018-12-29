@@ -1,0 +1,76 @@
+/*   
+  SmartTab plugin v0.99
+  jQuery Tab Control Plugin
+
+  http://tech-laboratory.blogspot.com
+  http://techlaboratory.wordpress.com
+*/
+.stContainer {
+    position:relative;
+    margin:0;
+    padding:0;
+    left:0;
+
+
+    background:inherit;
+    border: 0;
+    width:980px;
+
+}
+.stContainer div {
+
+    position:relative;
+    margin:             0;
+    border:             0;
+    padding:            0px;
+    border-top-width: 0 !important;
+    width:977px; height:306px;
+    text-align:left;
+    overflow:show;  background:#fff url("../images/bg_tab.gif") top repeat-x}
+
+
+
+.stContainer div img{ position:absolute; left:0; top:0; }
+
+.stContainer div div{ position:absolute; width:280px; height:250px;background:none; top:30px; right:0; color:#6f6f6f; line-height:16px; padding-right:40px}
+.stContainer div div a{ color:#6f6f6f}
+.stContainer div div h5{ color:#7a9d25; font-size:28px; font-weight:900; margin:10px 0px 0px; letter-spacing:-0.05em; line-height:50px}
+.stContainer div div h5 span{ color:#787878}
+.stContainer div div h6{ color:#787878; font-size:26px; font-weight:900; margin:0px; letter-spacing:-0.05em; font-style:italic; margin:10px 0px 20px; line-height:30px}
+
+
+.stContainer div div a.read{ display:block; width:118px; height:36px; background:url("../images/read.gif") top no-repeat; float:right; margin:10px 20px 0px 0px }
+.stContainer div div a.read:hover{ background:url("../images/read_hover.gif") top no-repeat}
+
+
+.stContainer ul {
+    display:block;
+    list-style: none;
+    position: relative;
+    padding: 0px ;
+        margin: 0;
+    width:980px;
+    height:46px;
+    clear: both;
+	border-bottom:4px solid #000;
+    background: url("../images/bg_zak_zak.png") top repeat    ;/*���O���橳*/
+
+}
+.stContainer ul li{ position: relative;   float: left;  border-right: 1px solid #171717; width:325px}
+
+.stContainer ul li a {text-decoration:none;font-size:24px; font-weight:normal; padding-top:18px;  width:325px; height:20px; display:block; padding-bottom:12px}
+
+.stContainer ul li a h6 {display:block;float:left;  font-size:26px;  letter-spacing:-0.05em; margin:0; padding:0;margin-left:20px; color:#959595; line-height:normal;margin-top:-12px}
+
+.stContainer ul li a.sel { background-image:url(../images/item_d.png);font-size:24px; font-weight:normal ; cursor:default;  color:#fff;}
+
+.stContainer ul li a.sel h6 { color:#7a9d25}
+
+.stContainer ul li a:link {  color:#7a9d25; }
+
+.stContainer ul li a h6:hover {   color:#fff; text-decoration:none; cursor:pointer!important}
+.stContainer ul li a.sel h6:hover{ color:#fff}
+
+
+
+.stContainer ul li a.dis {  color:#000;   background: #f00;    cursor:text;  }

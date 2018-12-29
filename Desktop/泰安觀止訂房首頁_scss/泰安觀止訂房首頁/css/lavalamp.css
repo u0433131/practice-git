@@ -1,0 +1,42 @@
+		.lavaLampBottomStyle {
+            position: relative;
+            height: 35px;
+			width: 770px;
+            overflow: hidden; background:url("../images/bg_menu.gif") 0px 30px no-repeat; margin:40px -10px 0px 0px  ; padding:0  /*觀止印象底下那行的圖片*/
+
+        }
+
+                .lavaLampBottomStyle li {
+                    float: left;
+                    list-style: none;
+					border-bottom: 5px solid  #4b4b4b;
+
+
+                }
+                    .lavaLampBottomStyle li.back {
+                        border-bottom: 2px solid  #00FF00;         /*觀止印象底線顏色*/
+                        width: 100px;
+                        height: 30px;
+                        z-index: 8;
+                        position: absolute;
+                    }
+                    .lavaLampBottomStyle li a {
+                        font: 15px arial;
+                        text-decoration: none;
+                        color: $ffffff;                     /*觀止印象字體顏色*/
+                        outline: none;
+                        text-align: center;
+                        top: 7px;
+                        letter-spacing: 0;
+                        z-index: 10;
+                        display: block;
+                        float: left;
+                        height: 35px;
+                        position: relative;
+                        overflow: hidden;
+						padding:0px 24px ;border-bottom: 5px solid  #4b4b4b!important; line-height:16px
+
+                    }
+                        .lavaLampBottomStyle li a:hover, .lavaLampBottomStyle li a:active {
+                            border: none; color:#fff
+                        }

@@ -1,0 +1,1101 @@
+$calendar-color:#AAAAAA;
+$greendot-color:#00FF00;
+$stepbackground-triangle-color:#FF0000;
+$introducefont-color:#000000;
+$font-color:#000000;     
+$price-color:#0000FF;
+$delprice-color:#FFFFFF;
+$button-color:#FFFF00;
+$title-step-color:#0000FF;
+
+
+
+.order {
+  .title {
+    font-size: 25px;
+    color: $introducefont-color;
+    margin-bottom: 20px;
+    > span {
+      color: $greendot-color;
+    }
+  }
+  font-size: 14px;
+  .content {
+    margin-bottom: 20px;
+    color: $introducefont-color;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: $title-step-color;
+  }
+  .content a {
+    text-decoration: underline;
+    color: $introducefont-color;
+  }
+}
+
+.steps {
+  .step {
+    > div:first-of-type {
+      font-size: 15px;
+      > span {
+        font-size: 25px;
+      }
+    }
+    color: $font-color;
+    text-align: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid $title-step-color;
+    padding-top: 32px;
+    display: inline-block;
+    &.active {
+      color: $introducefont-color;
+      background-color: $stepbackground-triangle-color;
+      border: 2px solid $font-color;
+    }
+    > .text {
+      font-size: 18px;
+    }
+  }
+  .arrow {
+    color: $title-step-color;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.date {
+  .date-header {
+    text-align: center;
+    background-color: $calendar-color;
+    a {
+      color: $font-color;
+      font-size: 15px;
+      padding: 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .prev {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+  }
+  font-size: 15px;
+  .date-title {
+    padding: 10px;
+    text-align: center;
+    color: $font-color;
+    background-color: $calendar-color;
+  }
+}
+
+.date-subtitle > div {
+  width: 14.28%;
+  float: left;
+  background-color: $calendar-color;
+  color: $font-color;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.date-inside {
+  > div {
+    width: 14.28%;
+    float: left;
+    background-color: $introducefont-color;
+    color: $font-color;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    &:nth-of-type(1), &:nth-of-type(7) {
+      background-color: $calendar-color;
+    }
+    &.active {
+      background-color: blue;
+    }
+    &:hover {
+      background-color: $greendot-color;
+    }
+    &:last-of-type {
+      border-right: 0px solid #fff;
+    }
+    > span {
+      padding-top: 17px;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  }
+  .dot-green:before {
+    content: "";
+    display: table;
+    height: 8px;
+    width: 8px;
+    background-color: $greendot-color;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 4px);
+    top: 7px;
+  }
+  .dot-red:before {
+    content: "";
+    display: table;
+    height: 8px;
+    width: 8px;
+    background-color: $stepbackground-triangle-color;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 4px);
+    top: 7px;
+  }
+  .angle-red:after {
+    content: "";
+    display: table;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    height: 20px;
+    width: 20px;
+    background-color: $stepbackground-triangle-color;
+    transform: rotate(45deg);
+  }
+}
+
+.room {
+  .img {
+    float: left;
+    width: 257px;
+    height: 180px;
+  }
+  .text {
+    float: left;
+    width: calc(100% - 407px);
+    color: $introducefont-color;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+  .book {
+    float: left;
+    width: 150px;
+    height: 180px;
+    position: relative;
+  }
+  .text {
+    .title {
+      color: $title-step-color;
+      font-size: 25px;
+      > div {
+        float: right;
+        span {
+          background-color: $title-step-color;
+          color: $introducefont-color;
+          font-size: 13px;
+          padding: 1px 3px;
+        }
+      }
+    }
+    .desc {
+      height: 105px;
+      overflow: hidden;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0;
+  transition: all .3s;
+  &:active, &:focus, &:hover {
+    outline-width: 0 !important;
+  }
+}
+
+.btn-primary {
+  color: $font-color !important;
+  border-color: $button-color;
+  background-color: $button-color;
+  width: 95px;
+  &:focus, &:active {
+    color: #fbc73b !important;
+    border-color: #fbc73b;
+    background-color: B088FF;
+    width: 95px;
+  }
+  &:hover {
+    color: #000 !important;
+    border-color: #fbc73b !important;
+    background-color: #fbc73b !important;
+  }
+}
+
+.btn-second {
+  color: $font-color !important;
+  border-color: $button-color;
+  background-color: $button-color;
+  &:hover {
+    color: #000;
+    border-color: hsl(43, 96%, 50%);
+    background-color: hsl(43, 96%, 50%);
+  }
+}
+
+.room .book {
+  .price {
+    font-size: 25px;
+    color: $price-color;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+  del {
+    font-size: 15px;
+    color: $delprice-color;
+  }
+  .btn {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.rooms .room {
+  border-bottom: 1px solid $font-color;
+}
+
+.btn-info {
+  color: $font-color !important;
+  border-color: $button-color;
+  background-color: $button-color;
+  &:hover, &:focus, &:active {
+    color: #000 !important;
+    border-color: hsl(90, 53%, 43%) !important;
+    background-color: hsl(90, 53%, 43%) !important;
+  }
+}
+
+.rooms {
+  .more {
+    margin-top: 20px;
+  }
+  .loading {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.modal-room .modal-content {
+  border-radius: 0;
+}
+
+.full-img {
+  width: 100%;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.slick-next {
+  right: 10px;
+  z-index: 2;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+}
+
+.slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+}
+
+.modal-room {
+  .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    border-width: 0;
+    background-color: transparent;
+  }
+  .modal-content {
+    border-color: $greendot-color;
+  }
+  .room-content {
+    border-top: 1px solid $greendot-color;
+    background-color: $font-color;
+    padding: 20px;
+    .title {
+      color: $title-step-color;
+      margin-bottom: 20px;
+      font-size: 25px;
+      > span {
+        color: $introducefont-color;
+      }
+    }
+    .content {
+      color: $introducefont-color;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+    .subtitle {
+      color: $title-step-color;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .content a {
+      color: $greendot-color;
+    }
+    .notice {
+      color: $title-step-color;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .content b {
+      color: $stepbackground-triangle-color;
+      font-size: 18px;
+    }
+  }
+}
+
+.order section {
+  .section-title {
+    font-size: 20px;
+    color: $greendot-color;
+    margin-bottom: 20px;
+  }
+  .section-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $introducefont-color;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $introducefont-color;
+  }
+}
+
+.section-form {
+  font-size: 18px;
+  color: $title-step-color;
+  margin-bottom: 15px;
+  .form-control {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.w-100 {
+  width: 100px !important;
+}
+
+.section-form .form-control-static {
+  display: inline-block;
+  margin-right: 10px;
+  span {
+    color: $introducefont-color;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .m-r {
+    margin-right: 20px;
+    display: inline-block;
+  }
+}
+
+.form-control:focus {
+  border-color: #76b532;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.section-content {
+  .date-wrap {
+    .date-title {
+      > {
+        span {
+          font-size: 25px;
+        }
+        a {
+          font-size: 15px;
+          color: $introducefont-color;
+          padding: 5px;
+          display: inline-block;
+          text-decoration: none;
+        }
+      }
+      padding: 5px;
+      text-align: center;
+    }
+    .date-inside > div > span {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      padding: 0px;
+    }
+  }
+  .date-inside > div {
+    height: 80px;
+    .text {
+      font-size: 15px;
+      color: hsl(0, 0%, 50%);
+      padding: 30px 15px;
+      text-align: left;
+      display: block;
+      .price {
+        display: block;
+        font-size: 18px;
+        color: hsl(0, 0%, 30%);
+      }
+    }
+  }
+}
+
+.order section {
+  margin-bottom: 50px;
+}
+
+.section-form {
+  .form-control-static {
+    .number {
+      height: 30px;
+      width: 30px;
+      background-color: #f5b50b;
+      color: #242424;
+      display: inline-block;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 10px;
+    }
+    a {
+      color: $stepbackground-triangle-color;
+      text-decoration: underline;
+    }
+  }
+  .form-control-static2 {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+    color: $introducefont-color;
+    &.last {
+      margin-left: 10px;
+    }
+  }
+}
+
+.section-form-group {
+  padding-left: 40px;
+}
+
+.w-250 {
+  width: 250px !important;
+}
+
+.section-form input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.section-detail {
+  h5 {
+    color: $introducefont-color;
+  }
+  ul {
+    a {
+      font-size: 14px;
+      color: $title-step-color;
+      text-decoration: underline;
+    }
+    color: $title-step-color;
+    padding-left: 20px;
+    li {
+      width: 33.3%;
+      float: left;
+    }
+  }
+}
+
+section.table {
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.table {
+  .head {
+    font-size: 14px;
+    text-align: center;
+    .td {
+      color: $font-color;
+      background-color: $greendot-color;
+      padding: 5px;
+    }
+  }
+  .tr {
+    background-color: #000;
+  }
+  .td {
+    padding-left: 0;
+    padding-right: 0;
+    color: $introducefont-color;
+    text-align: center;
+    background-color: $font-color;
+    .price {
+      font-size: 25px;
+    }
+  }
+}
+
+.tr-room > .td:not(:first-of-type) {
+  padding-top: 50px;
+}
+
+.table .tr {
+  &.tr-add {
+    padding: 20px;
+    background-color: $calendar-color;
+    color: #000;
+    line-height: 1.6;
+  }
+  &.tr-amount {
+    padding: 10px 20px;
+    background-color: $font-color;
+    color: $title-step-color;
+    text-align: right;
+    .amount {
+      color: $introducefont-color;
+      margin-left: 20px;
+    }
+  }
+}
+
+.order {
+  .tabs {
+    padding-top: 30px;
+    margin-bottom: 10px;
+    > nav > a {
+      width: 50%;
+      background-color: $font-color;
+      color: $greendot-color;
+      border-color: $greendot-color;
+      float: left;
+      display: block;
+      margin: 0;
+      &.active {
+        background-color: $greendot-color;
+        color: $font-color;
+        border-color: $greendot-color;
+      }
+    }
+    .tab {
+      display: none;
+      padding: 10px 0;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .has-bottom-border {
+    border-bottom: 1px dotted #88c84b;
+  }
+  .agree {
+    padding: 20px;
+    input {
+      margin-right: 10px;
+    }
+  }
+}
+
+.next-step .btn {
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.btn-default {
+  color: $introducefont-color !important;
+  border-color: $calendar-color;
+  background-color: $calendar-color;
+  &:focus, &:active {
+    color: $introducefont-color !important;
+    border-color: $calendar-color;
+    background-color: $calendar-color;
+  }
+  &:hover {
+    color: $introducefont-color !important;
+    border-color: $calendar-color;
+    background-color: $calendar-color;
+  }
+}
+
+.next-step {
+  > a:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-sm {
+  max-width: 400px;
+}
+
+.room-login {
+  color: #fff;
+  padding: 30px 20px;
+  background-color: #000;
+  font-size: 14px;
+  .title {
+    color: #88c84b;
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.room-login {
+  .forgot {
+    color: #f5db00;
+    float: right;
+    padding: 10px 0;
+  }
+  .checkbox {
+    float: left;
+  }
+}
+
+.btn-success {
+  color: #fff !important;
+  background-color: #5cb85c !important;
+  border-color: #4cae4c !important;
+  &:focus, &:active {
+    color: #fff !important;
+    background-color: #5cb85c !important;
+    border-color: #4cae4c !important;
+  }
+  &:hover {
+    color: #fff !important;
+    background-color: hsl(120, 39%, 44%) !important;
+    border-color: hsl(120, 39%, 44%) !important;
+  }
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.section-hearder {
+  padding: 10px;
+  background-color: $greendot-color;
+  color: $introducefont-color;
+  text-align: center;
+  font-size: 18px;
+}
+
+.checkbox {
+  color: $introducefont-color;
+}
+
+.order {
+  .required {
+    color: $title-step-color;
+  }
+  .form {
+    color: $introducefont-color;
+    padding: 20px 40px;
+  }
+  .section-info {
+    border: 1px solid #88c84b;
+    margin-bottom: 10px;
+    .add-text {
+      color: $calendar-color;
+    }
+  }
+  .form {
+    .control-label {
+      text-align: left;
+    }
+    .form-notice {
+      color: $title-step-color;
+      margin-top: 5px;
+    }
+  }
+}
+
+.radio img {
+  margin-left: 10px;
+}
+
+.form-search {
+  max-width: 500px;
+}
+
+.m-t-10 {
+  margin-top: 10px !important;
+}
+
+.btn-cons {
+  width: 120px;
+  text-align: center;
+}
+
+.table-order > div {
+  border-bottom: 1px solid #fff;
+  &:last-of-type {
+    border-bottom: 1px solid #88c84b;
+  }
+  > div {
+    padding: 10px 15px;
+    color: $introducefont-color;
+    font-size: 15px;
+    > span {
+      color: $introducefont-color;
+      width: 100px;
+      display: inline-block;
+    }
+    b {
+      font-size: 18px;
+      color: $introducefont-color !important;
+    }
+  }
+}
+
+.section-order {
+  margin-bottom: 30px;
+}
+
+.detail-hearder {
+  padding: 10px;
+  background-color: $font-color;
+  color: $introducefont-color;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid $introducefont-color;
+  border-right: 1px solid $introducefont-color;
+}
+
+.table-detail {
+  border-top: 1px solid $introducefont-color;
+  border-left: 1px solid $introducefont-color;
+  background-color: #484848;
+  margin-bottom: 50px;
+}
+
+.table-detail-form > div {
+  border-bottom: 1px solid $introducefont-color;
+  border-right: 1px solid $introducefont-color;
+  > div {
+    padding: 10px;
+    color: $introducefont-color;
+    &:not(:last-of-type) {
+      border-right: 1px solid $introducefont-color;
+    }
+    &:last-of-type {
+      color: $title-step-color;
+    }
+  }
+}
+
+.display-desktop {
+  display: block;
+}
+
+.table-detail-form > div > div:last-of-type {
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.display-inline-desktop {
+  display: inline-block;
+}
+
+.tabs {
+  .tab-nav {
+    margin-bottom: 20px;
+    a {
+      color: $introducefont-color;
+      padding: 5px 10px 10px 10px;
+      font-size: 16px;
+      position: relative;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    li.active a:after {
+      content: "";
+      height: 2px;
+      background-color: #fbc73b;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    > li {
+      float: left;
+    }
+  }
+  .tab {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.has-error {
+  .checkbox, .checkbox-inline, .control-label, .help-block, .radio, .radio-inline, &.checkbox label, &.checkbox-inline label, &.radio label, &.radio-inline label {
+    color: $stepbackground-triangle-color;
+  }
+  .form-control {
+    border-color: $stepbackground-triangle-color;
+  }
+}
+
+.btn-section a {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.modal-room .gifts {
+  padding: 0;
+}
+
+.gift {
+  > .gift-content {
+    display: none;
+  }
+  &.active > .gift-content {
+    display: block;
+  }
+}
+
+.gifts .title {
+  padding: 15px 15px;
+  margin-bottom: 0 !important;
+  > span {
+    color: $greendot-color !important;
+    font-size: 22px;
+    line-height: 35px;
+    width: calc(100% - 100px);
+    cursor: pointer;
+    display: block;
+    float: left;
+    > i {
+      padding: 5px 10px;
+      transform: rotate(0deg);
+      transition: all .3s;
+    }
+  }
+}
+
+.gift.active .title > span > i {
+  transform: rotate(180deg);
+}
+
+.gifts {
+  .gift-content {
+    padding: 0 15px;
+  }
+  > .gift:not(:last-of-type) {
+    border-bottom: 1px solid $greendot-color;
+  }
+}
+
+.gift-cart {
+  border-top: 1px solid $greendot-color;
+  padding: 10px 15px;
+  background: #ccc url("../images/bg_site.gif") top repeat;
+  color: $introducefont-color;
+  line-height: 30px;
+}
+
+@media (max-width: 992px) {
+  .steps {
+    .step {
+      color: #fbda3b;
+      text-align: center;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 2px solid #fbda3b;
+      padding-top: 12px;
+      display: inline-block;
+      > {
+        div:first-of-type {
+          font-size: 12px;
+        }
+        .text {
+          font-size: 15px;
+        }
+        div:first-of-type > span {
+          font-size: 20px;
+        }
+      }
+    }
+    .arrow {
+      color: #fbda3b;
+      font-size: 20px;
+      display: inline-block;
+      line-height: 80px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .display-desktop {
+    display: none;
+  }
+  .room {
+    .img {
+      float: none;
+      margin-bottom: 20px;
+    }
+    .text {
+      float: none;
+      width: 100%;
+      color: #fff;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .book {
+      float: none;
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .text .desc {
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .book {
+      .btn {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .price {
+        margin-top: 20px;
+      }
+    }
+    .text .title > div {
+      float: none;
+      margin-top: 10px;
+    }
+  }
+  .section-form .form-control-static .m-r {
+    margin-left: 0;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .order section .section-content {
+    padding-left: 0;
+    padding-right: 0;
+    color: #fff;
+  }
+  .section-content .date-inside > div .text {
+    font-size: 12px;
+    color: hsl(0, 0%, 50%);
+    padding: 23px 5px 0;
+    text-align: left;
+    display: block;
+    .price {
+      display: block;
+      font-size: 12px;
+      color: hsl(0, 0%, 30%);
+      line-height: 12px;
+      > span {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .section-form-group {
+    padding-left: 10px;
+  }
+  .section-detail ul li {
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+  }
+  .tr-room > .td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .table .head .td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .order .form {
+    color: #fff;
+    padding: 20px 10px;
+  }
+  .table-order > div > div {
+    padding: 10px 0;
+    color: #fbc73b;
+    font-size: 15px;
+  }
+  .table-detail-form > div > div {
+    &:not(:last-of-type) {
+      padding-bottom: 0;
+      border-right-width: 0;
+    }
+    &:last-of-type {
+      height: 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .mobile-border {
+    border-bottom: 1px solid #fff;
+  }
+  .large {
+    height: auto !important;
+    white-space: inherit !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .next-step {
+    > a:not(:last-of-type) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: block;
+      margin: 5px auto !important;
+    }
+  }
+  .display-inline-desktop {
+    display: none !important;
+  }
+  .tabs .tab-nav > li {
+    float: left;
+    padding: 5px 0 15px 0;
+  }
+}
